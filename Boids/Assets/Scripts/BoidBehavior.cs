@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BoidBehavior : MonoBehaviour
 {
-    private CharacterController boid;
+//    private CharacterController boid;
+    private Rigidbody boidRb;
     [SerializeField] BoidSettings boidSettings;
 
     private Vector3 resultantMovementVector;
@@ -17,18 +18,20 @@ public class BoidBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boid = gameObject.GetComponent<CharacterController>();
+//        boid = gameObject.GetComponent<CharacterController>();
+        boidRb = gameObject.GetComponent<Rigidbody>();
 
         resultantMovementVector = transform.forward;
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate is called once per physics calculation frame
+    void FixedUpdate()
     {
         resultantMovementVector = BoidIntereaction() + ObstacleInteraction();
         resultantMovementVector = resultantMovementVector.normalized * Mathf.Clamp(resultantMovementVector.magnitude, 0, boidSettings.maxVelocity);
 //        Debug.Log(resultantMovementVector.magnitude);
-        boid.Move(resultantMovementVector * Time.deltaTime);
+//        boid.Move(resultantMovementVector * Time.deltaTime);
+        boidRb.MovePosition(boidRb.position + (resultantMovementVector * Time.deltaTime));
     }
 
     /**
@@ -113,11 +116,6 @@ public class BoidBehavior : MonoBehaviour
 
 
 
-//      TODO: check if raycasts should be done on FixedUpdate()
-
-
-
-
         float rayAngle = 0;
         RaycastHit hit;
         Vector3 boidToObstacleVector = Vector3.zero;        // vector pointing towards obstacle
@@ -128,7 +126,7 @@ public class BoidBehavior : MonoBehaviour
         {
             // draw raycast
             rayAngle = (360 / boidSettings.rayCount) * i;
-            //            Debug.DrawRay(transform.position, Quaternion.AngleAxis(rayAngle, transform.up) * transform.forward * detectionDistance);
+//            Debug.DrawRay(transform.position, Quaternion.AngleAxis(rayAngle, transform.up) * transform.forward * detectionDistance);
 
             // move in opposite direction if obstacle is found
             // strength is based on inverse square law ('normalized = vector / magnitude', so only need 1 more "/ magnitude")
