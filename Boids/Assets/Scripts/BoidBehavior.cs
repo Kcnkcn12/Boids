@@ -21,7 +21,7 @@ public class BoidBehavior : MonoBehaviour
 //        boid = gameObject.GetComponent<CharacterController>();
         boidRb = gameObject.GetComponent<Rigidbody>();
 
-        resultantMovementVector = transform.forward;
+        resultantMovementVector = transform.forward * boidSettings.maxVelocity;
     }
 
     // FixedUpdate is called once per physics calculation frame
@@ -48,8 +48,8 @@ public class BoidBehavior : MonoBehaviour
         // obtain array of neighboring boids within a radius around the boid
         Collider[] neighboringBoids = Physics.OverlapSphere(gameObject.transform.position, boidSettings.detectionDistance, LayerMask.GetMask("Boid"));
 
-        Vector3 combinedMovementVector = Vector3.zero; // combination of vectors from all neighboring boids
-        if (neighboringBoids.Length == 0)
+        Vector3 combinedMovementVector = Vector3.zero;      // combination of vectors from all neighboring boids
+        if (neighboringBoids.Length == 1)                   // detects self, so must equality check with 1
         {
             // return current direction
             combinedMovementVector = resultantMovementVector;
@@ -134,7 +134,7 @@ public class BoidBehavior : MonoBehaviour
             {
                 boidToObstacleVector = hit.point - gameObject.transform.position;
                 obstacleAvoidanceVector = -(boidToObstacleVector.normalized / boidToObstacleVector.magnitude);
-                combinedMovementVector += obstacleAvoidanceVector;
+                combinedMovementVector += obstacleAvoidanceVector * boidSettings.obstacleAvoidanceModifier;
             }
         }
 

@@ -12,6 +12,7 @@ public class BoidSettings : ScriptableObject
     public float cohesionModifier;
 
     public int rayCount;
+    public float obstacleAvoidanceModifier;
 
     public float maxVelocity;
 }

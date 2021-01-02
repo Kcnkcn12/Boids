@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa10e2c4f60927d4287a75336734787f, type: 3}
   m_Name: Boid Settings
   m_EditorClassIdentifier: 
-  detectionDistance: 1
+  detectionDistance: 5
   separationModifier: 1
   alignmentModifier: 1
-  cohesionModifier: 1.5
+  cohesionModifier: 1
   rayCount: 30
+  obstacleAvoidanceModifier: 0.05
   maxVelocity: 3
