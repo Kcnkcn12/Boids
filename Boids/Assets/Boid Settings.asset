@@ -18,4 +18,5 @@ MonoBehaviour:
   cohesionModifier: 1
   rayCount: 30
   obstacleAvoidanceModifier: 0.05
-  maxVelocity: 3
+  minVelocity: 5
+  maxVelocity: 7

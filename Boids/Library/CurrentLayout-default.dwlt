@@ -363,7 +363,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -551,7 +551,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 597
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -680,9 +680,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.59408, y: -70.17732, z: 30.179207}
+    m_Target: {x: -8.434025, y: -66.83297, z: 37.828213}
     speed: 2
-    m_Value: {x: -4.59408, y: -70.17732, z: 30.179207}
+    m_Value: {x: -8.434025, y: -66.83297, z: 37.828213}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0

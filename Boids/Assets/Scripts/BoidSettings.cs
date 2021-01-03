@@ -14,5 +14,6 @@ public class BoidSettings : ScriptableObject
     public int rayCount;
     public float obstacleAvoidanceModifier;
 
+    public float minVelocity;
     public float maxVelocity;
 }
