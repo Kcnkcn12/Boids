@@ -826,7 +826,7 @@ GameObject:
   - component: {fileID: 1904012374}
   - component: {fileID: 1904012373}
   m_Layer: 0
-  m_Name: BoidHandler
+  m_Name: EntityHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -844,6 +844,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97fafb83eebbac4d9aa24b044a32b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boidPrefab: {fileID: 5550881483177034121, guid: 2f267440a2227a9418802b2f71456791,
+    type: 3}
+  obstaclePrefab: {fileID: 8533552252617594883, guid: 2f015c299b2538346bc29515885b1e00,
+    type: 3}
 --- !u!4 &1904012374
 Transform:
   m_ObjectHideFlags: 0
