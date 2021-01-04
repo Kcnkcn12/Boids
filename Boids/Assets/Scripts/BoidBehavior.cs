@@ -29,6 +29,8 @@ public class BoidBehavior : MonoBehaviour
         resultantMovementVector = BoidIntereaction() + ObstacleInteraction();
         resultantMovementVector = resultantMovementVector.normalized * Mathf.Clamp(resultantMovementVector.magnitude, boidSettings.minVelocity, boidSettings.maxVelocity);
         boidRb.MovePosition(boidRb.position + (resultantMovementVector * Time.deltaTime));
+
+//        Debug.DrawRay(transform.position, resultantMovementVector.normalized * 2);
     }
 
     /**
