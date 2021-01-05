@@ -20,3 +20,12 @@ MonoBehaviour:
   obstacleAvoidanceModifier: 0.05
   minVelocity: 5
   maxVelocity: 7
+  GapToSeparateCurrentValuesFromDefaults: 0
+  defaultDetectionDistance: 5
+  defaultSeparationModifier: 1.29
+  defaultAlignmentModifier: 1.03
+  defaultCohesionModifier: 0.72
+  defaultRayCount: 30
+  defaultObstacleAvoidanceModifier: 0.05
+  defaultMinVelocity: 5
+  defaultMaxVelocity: 7
