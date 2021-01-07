@@ -17,7 +17,7 @@ MonoBehaviour:
   alignmentModifier: 1.03
   cohesionModifier: 0.72
   rayCount: 30
-  obstacleAvoidanceModifier: 0.05
+  obstacleAvoidanceModifier: 0.1
   minVelocity: 5
   maxVelocity: 7
   GapToSeparateCurrentValuesFromDefaults: 0
@@ -26,6 +26,6 @@ MonoBehaviour:
   defaultAlignmentModifier: 1.03
   defaultCohesionModifier: 0.72
   defaultRayCount: 30
-  defaultObstacleAvoidanceModifier: 0.05
+  defaultObstacleAvoidanceModifier: 0.1
   defaultMinVelocity: 5
   defaultMaxVelocity: 7

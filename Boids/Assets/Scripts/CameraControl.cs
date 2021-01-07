@@ -14,24 +14,34 @@ public class CameraControl : MonoBehaviour
     [SerializeField] float minZoomLevel;
     [SerializeField] float maxZoomLevel;
 
+    [HideInInspector] public bool cameraLock;
+    [HideInInspector] public bool CameraLock
+    {
+        set { cameraLock = value; }
+    }
+
     private Vector3 movementVector;
 
     // Start is called before the first frame update
     void Start()
     {
         zoomLevel = Camera.main.orthographicSize;
+        cameraLock = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveZ = Input.GetAxis("Vertical") * zSpeed;
-        moveX = Input.GetAxis("Horizontal") * xSpeed;
-        movementVector = Vector3.forward * moveZ + Vector3.right * moveX;
-        transform.position += movementVector * Time.deltaTime;
+        if(cameraLock == false)
+        {
+            moveZ = Input.GetAxis("Vertical") * zSpeed;
+            moveX = Input.GetAxis("Horizontal") * xSpeed;
+            movementVector = Vector3.forward * moveZ + Vector3.right * moveX;
+            transform.position += movementVector * Time.deltaTime;
 
-        zoomLevel += -Input.GetAxis("Mouse ScrollWheel") * zoomSensitivity;
-        zoomLevel = Mathf.Clamp(zoomLevel, minZoomLevel, maxZoomLevel);
-        Camera.main.orthographicSize = zoomLevel;
+            zoomLevel += -Input.GetAxis("Mouse ScrollWheel") * zoomSensitivity;
+            zoomLevel = Mathf.Clamp(zoomLevel, minZoomLevel, maxZoomLevel);
+            Camera.main.orthographicSize = zoomLevel;
+        }
     }
 }
