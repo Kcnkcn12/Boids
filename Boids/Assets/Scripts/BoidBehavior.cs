@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BoidBehavior : MonoBehaviour
 {
-//    private CharacterController boid;
     private Rigidbody boidRb;
     [SerializeField] BoidSettings boidSettings;
 
     private Vector3 resultantMovementVector;
 
-    [HideInInspector] public Vector3 MovementVector
+    [HideInInspector]
+    public Vector3 MovementVector
     {
         get { return resultantMovementVector; }
     }
@@ -18,7 +18,6 @@ public class BoidBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-//        boid = gameObject.GetComponent<CharacterController>();
         boidRb = gameObject.GetComponent<Rigidbody>();
 
         resultantMovementVector = transform.forward * boidSettings.maxVelocity;
@@ -28,10 +27,10 @@ public class BoidBehavior : MonoBehaviour
     void FixedUpdate()
     {
         resultantMovementVector = BoidIntereaction() + ObstacleInteraction();
-        resultantMovementVector = resultantMovementVector.normalized * Mathf.Clamp(resultantMovementVector.magnitude, 0, boidSettings.maxVelocity);
-//        Debug.Log(resultantMovementVector.magnitude);
-//        boid.Move(resultantMovementVector * Time.deltaTime);
+        resultantMovementVector = resultantMovementVector.normalized * Mathf.Clamp(resultantMovementVector.magnitude, boidSettings.minVelocity, boidSettings.maxVelocity);
         boidRb.MovePosition(boidRb.position + (resultantMovementVector * Time.deltaTime));
+
+//        Debug.DrawRay(transform.position, resultantMovementVector.normalized * 2);
     }
 
     /**
@@ -69,7 +68,7 @@ public class BoidBehavior : MonoBehaviour
             foreach (Collider neighborBoid in neighboringBoids)
             {
                 //ignore self
-                if(neighborBoid.gameObject == gameObject)
+                if (neighborBoid.gameObject == gameObject)
                 {
                     continue;
                 }
@@ -82,7 +81,6 @@ public class BoidBehavior : MonoBehaviour
                 // strength is based on inverse square law ('normalized = vector / magnitude', so only need 1 more "/ magnitude")
                 boidToNeighborVector = neighborBoid.gameObject.transform.position - gameObject.transform.position;
                 neighborAvoidanceVector = -(boidToNeighborVector.normalized / boidToNeighborVector.magnitude);
-                Debug.Log(boidToNeighborVector.magnitude);
                 separationVector += neighborAvoidanceVector * boidSettings.separationModifier;
 
                 // alignment rule (move in average same direction and speed as neighboring boids)

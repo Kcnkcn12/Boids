@@ -13,9 +13,19 @@ MonoBehaviour:
   m_Name: Boid Settings
   m_EditorClassIdentifier: 
   detectionDistance: 5
-  separationModifier: 1
-  alignmentModifier: 1
-  cohesionModifier: 1
+  separationModifier: 1.29
+  alignmentModifier: 1.03
+  cohesionModifier: 0.72
   rayCount: 30
-  obstacleAvoidanceModifier: 0.05
-  maxVelocity: 3
+  obstacleAvoidanceModifier: 0.1
+  minVelocity: 5
+  maxVelocity: 7
+  GapToSeparateCurrentValuesFromDefaults: 0
+  defaultDetectionDistance: 5
+  defaultSeparationModifier: 1.29
+  defaultAlignmentModifier: 1.03
+  defaultCohesionModifier: 0.72
+  defaultRayCount: 30
+  defaultObstacleAvoidanceModifier: 0.1
+  defaultMinVelocity: 5
+  defaultMaxVelocity: 7
