@@ -30,7 +30,9 @@ public class BoidBehavior : MonoBehaviour
         resultantMovementVector = resultantMovementVector.normalized * Mathf.Clamp(resultantMovementVector.magnitude, boidSettings.minVelocity, boidSettings.maxVelocity);
         boidRb.MovePosition(boidRb.position + (resultantMovementVector * Time.deltaTime));
 
-//        Debug.DrawRay(transform.position, resultantMovementVector.normalized * 2);
+        transform.rotation = Quaternion.LookRotation(resultantMovementVector);
+
+        //        Debug.DrawRay(transform.position, resultantMovementVector.normalized * 2);
     }
 
     /**

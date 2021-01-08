@@ -70,7 +70,7 @@ public class EntitySpawner : MonoBehaviour//, IPointerDownHandler
                 if ((1 << mouseClickLocation.collider.gameObject.layer) == LayerMask.GetMask("Ground"))
                 {
                     spawnLocation = mouseClickLocation.point;
-                    spawnLocation.y += 1.0f;
+                    spawnLocation.y += 0.2f;
 
                     Instantiate(obstaclePrefab, spawnLocation, Quaternion.Euler(Vector3.zero));
                 }
