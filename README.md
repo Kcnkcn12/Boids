@@ -1,6 +1,6 @@
 # Boids
 # About The Project
-This project is a personal project about Boids created to learn about emergent behavior, Unity, C#, and linear algebra.
+This project is a personal project about Boids created to learn about emergent behavior, linear algebra, Unity, C#, and Github.
 
 Boids follow a small set of rules that give rise to emergent behavior (i.e. flocking behavior) in a "procedural" manner. These rules are:
 * **Separation**: Boids will move away from other boids (i.e. boids avoid running into each other).
