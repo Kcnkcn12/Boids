@@ -44,6 +44,7 @@ git clone https://github.com/Kcnkcn12/Boids/tree/main/Boids/Builds
 * ESC Key: quit application
 # Roadmap
 Disclaimer: Since this is my first ever personal project with no direct practical use, I am unlikely to continue development of this project.
+
 Disclaimer 2: This is less of a roadmap and more of a suggestions list. All content in e.g. are not seriously considered yet.
 * Convert project to 3D
 * Better UI (e.g. collapsable/Hidable UI, better contrast, list of controls)
@@ -58,6 +59,7 @@ Disclaimer: Since this is a *personal* project, I am not actively looking for or
 5. Open a Pull Request
 # Contact
 Screen Name: Kcnkcn - [@Kcnkcn12](https://twitter.com/Kcnkcn12) - kcnkcn12@gmail.com (Since these are my personal accounts, I will not reveal my real name)
+
 Project Link: [https://github.com/Kcnkcn12/Boids](https://github.com/Kcnkcn12/Boids)
 # Acknowledgements
 ## Inspiration
