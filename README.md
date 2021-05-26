@@ -2,7 +2,7 @@
 # About The Project
 This project is a personal project about Boids created to learn about emergent behavior, linear algebra, Unity, C#, and Github.
 
-Boids follow a small set of rules that give rise to emergent behavior (i.e. flocking behavior) in a "procedural" manner. These rules are:
+Boids follow a small set of rules that give rise to emergent behavior (in this case, flocking behavior) in a "procedural" manner. These rules are:
 * **Separation**: Boids will move away from other boids (i.e. boids avoid running into each other).
 * **Alignment**: Boids will move in the average direction and speed of other boids (i.e. boids move together)
 * **Coherence**: Boids will move toward the average center position of the boids (i.e. boids group up)
@@ -43,22 +43,20 @@ git clone https://github.com/Kcnkcn12/Boids/tree/main/Boids/Builds
 * Mouse Scroll Wheel: Zoom camera
 * ESC Key: quit application
 # Roadmap
-Disclaimer: Since this is my first ever personal project with no direct practical use, I am unlikely to continue development of this project.
-
-Disclaimer 2: This is less of a roadmap and more of a suggestions list. All content in e.g. are not seriously considered yet.
+Disclaimer: This is less of a roadmap and more of a list I would like to see done.
 * Convert project to 3D
 * Better UI (e.g. collapsable/Hidable UI, better contrast, list of controls)
 * Improve play area (e.g. better scenery, handcrafted scene)
 * Add new interactions/filters (e.g. boids are color-coded and perform Alignment and Cohesion with same-colored boids)
 # Contributing
-Disclaimer: Since this is a *personal* project, I am not actively looking for or will keep up with contributions in a timely manner. However, if you want to contribute, I will do my best to support.
+Disclaimer: I am not actively asking for contributions since I don't think this project is useful to anyone. However, if you want to contribute, I am happy to support.
 1. Fork the Project
 2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
 3. Commit your Changes (git commit -m 'Add some AmazingFeature')
 4. Push to the Branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
 # Contact
-Screen Name: Kcnkcn - [@Kcnkcn12](https://twitter.com/Kcnkcn12) - kcnkcn12@gmail.com (Since these are my personal accounts, I will not reveal my real name)
+kcnkcn12@gmail.com
 
 Project Link: [https://github.com/Kcnkcn12/Boids](https://github.com/Kcnkcn12/Boids)
 # Acknowledgements
